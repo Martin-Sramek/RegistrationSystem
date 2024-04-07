@@ -1,6 +1,5 @@
 package com.engeto.martinsramek.p2.registrationsystem.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,17 +9,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class SimplifiedUser {
 
     private Long id;
 
     private String name;
 
     private String surname;
-
-    @JsonProperty("personID")
-    private String personId;
-
-    private String uuid;
 
 }
