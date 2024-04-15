@@ -8,17 +8,6 @@ import java.util.List;
 
 public class Mapper {
 
-    public static User fromUserDtoToUser(UserDto userDto) {
-        return User
-                .builder()
-                .id(Long.parseLong(userDto.getId()))
-                .name(userDto.getName())
-                .surname(userDto.getSurname())
-                .personId(userDto.getPersonId())
-                .uuid(userDto.getUuid())
-                .build();
-    }
-
     public static UserDto fromUserToUserDto(User user) {
                 return UserDto
                 .builder()
@@ -52,16 +41,8 @@ public class Mapper {
         return users.stream().map(Mapper::fromUserToUserDto).toList();
     }
 
-    public static List<User> fromListUserDtoToListUser(List<UserDto> usersDto) {
-        return usersDto.stream().map(Mapper::fromUserDtoToUser).toList();
-    }
-
     public static List<SimplifiedUserDto> fromListSimplifiedUserToListSimplifiedUserDto(List<SimplifiedUser> simplifiedUsers) {
         return simplifiedUsers.stream().map(Mapper::fromSimplifiedUserToSimplifiedUserDto).toList();
-    }
-
-    public static List<SimplifiedUser> fromListSimplifiedUserDtoToListSimplifiedUser(List<SimplifiedUserDto> simplifiedUsersDto) {
-        return simplifiedUsersDto.stream().map(Mapper::fromSimplifiedUserDtoToSimplifiedUser).toList();
     }
 
 }
