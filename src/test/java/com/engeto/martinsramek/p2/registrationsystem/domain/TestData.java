@@ -2,7 +2,6 @@ package com.engeto.martinsramek.p2.registrationsystem.domain;
 
 import com.engeto.martinsramek.p2.registrationsystem.domain.dto.CreateUserDto;
 import com.engeto.martinsramek.p2.registrationsystem.domain.dto.SimplifiedUserDto;
-import com.engeto.martinsramek.p2.registrationsystem.domain.dto.UserDto;
 
 public class TestData {
 
@@ -57,24 +56,6 @@ public class TestData {
                 .id(3L)
                 .name("Veronika")
                 .surname("Špačková")
-                .build();
-    }
-
-    public static UserDto createUserDto1() {
-        return UserDto.builder()
-                .id("1")
-                .name("Petr")
-                .surname("Novák")
-                .personId("jXa4g3H7oPq2")
-                .uuid("asdfg456")
-                .build();
-    }
-
-    public static SimplifiedUserDto createSimplifiedUserDto1() {
-        return SimplifiedUserDto.builder()
-                .id("1")
-                .name("Petr")
-                .surname("Novák")
                 .build();
     }
 
